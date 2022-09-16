@@ -16,27 +16,23 @@
             <td></td>
         </tr>
     </thead>
+
+
+
     <tbody>
-        <tr>
-            <td>Developer</td>
-            <td>Christian Vidal</td>
-            <td>07-10-2020</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>CyberSecurity</td>
-            <td>Juan Arevalo</td>
-            <td>23-10-2019</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>AngularProgramming</td>
-            <td>Cesar Agudelo</td>
-            <td>10-03-2021</td>
-            <td></td>
-            <td></td>
-        </tr>
+       <tr *ngFor="let comentario of listComentarios">
+
+        <td>{{comentario.titulo}}</td>
+        <td>{{comentario.autor}}</td>
+        <td>{{comentario.fechaCreacion|date:'dd/mm/yyyy'}}</td>
+        <td></td>
+        <td></td>
+       </tr>
     </tbody>
 </table>
+
+
+<div *ngif="listComentarios.length==0" class="row mt5">
+    <h5>no hay ningun comentario registrado</h5>
+
+</div>

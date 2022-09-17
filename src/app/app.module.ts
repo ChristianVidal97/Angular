@@ -7,6 +7,7 @@ import { AgregarEditarComentarioComponent } from './components/agregar-editar-co
 import { ListarComentariosComponent } from './components/listar-comentarios/listar-comentarios.component';
 import { VerComentariosComponent } from './components/ver-comentarios/ver-comentarios.component';
 import { ListarDatosPersonalesComponent } from './components/listar-datos-personales/listar-datos-personales.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ListarDatosPersonalesComponent } from './components/listar-datos-person
     ListarDatosPersonalesComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

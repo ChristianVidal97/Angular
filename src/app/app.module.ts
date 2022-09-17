@@ -8,6 +8,7 @@ import { ListarComentariosComponent } from './components/listar-comentarios/list
 import { VerComentariosComponent } from './components/ver-comentarios/ver-comentarios.component';
 import { ListarDatosPersonalesComponent } from './components/listar-datos-personales/listar-datos-personales.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

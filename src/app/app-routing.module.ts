@@ -1,21 +1,21 @@
 import { NgModule } from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { ListarComentariosComponent } from './components/listar-comentarios/listar-comentarios.component';
 import { AgregarEditarComentarioComponent } from './components/agregar-editar-comentario/agregar-editar-comentario.component';
 import { VerComentariosComponent } from './components/ver-comentarios/ver-comentarios.component';
+import { from } from 'rxjs';
 
-const routes=[
+const routes: Routes=[
   {path:'', component:ListarComentariosComponent},
   {path:'add', component:AgregarEditarComentarioComponent},
   {path:'editar/:id', component:AgregarEditarComentarioComponent},
   {path:'visualizar/id', component:VerComentariosComponent},
-  {path:'**', redirecTo:'', pathMatch:'full'}
+  {path:'**', redirectTo:'', pathMatch:'full'}
 ];
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule
-  ]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }
